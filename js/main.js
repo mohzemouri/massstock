@@ -1,55 +1,64 @@
-document.addEventListener("readystatechange", () => {
-    setTimeout(() => {
-        document.querySelector(".loader").style.display = "none"
-    },1600)  
-})
-
-const addProduct = document.querySelector("#addProduct")
-const productBox = document.querySelector(".add-product")
-const closeBtn = document.querySelector(".close-btn")
-
-if (addProduct != null || closeBtn != null ) {
-    addProduct.addEventListener("click", (e) => {
-        e.preventDefault()
-        productBox.scrollTop = 0
-        productBox.classList.add("show")
-    })
-    closeBtn.addEventListener("click", (e) => {
-        e.preventDefault()
-        productBox.classList.remove("show")
-    })
-}
-
-/* ********************* 
-    CHANGE THEME
-********************* */
-const toggleMode = document.querySelector(".toggle-dark-mode")
-const lightBtn = document.querySelector("#light")
-const darkBtn = document.querySelector("#dark")
-
-toggleMode.addEventListener("click", e => {
+/**************************
+ * Mobile navigation
+ **************************/
+const menuToggle = document.querySelector("#menutoggle")
+const mobileNav = document.querySelector(".mobile__nav")
+menuToggle.addEventListener("click", e => {
     e.preventDefault()
-    if(localStorage.getItem("theme") == "dark") {
-        changeThemeToLight()
-    }else{
-        changeThemeToDark()
-    }
+    mobileNav.classList.toggle("show")
 })
+/**************************
+ * Filter accordion
+ **************************/
+const filterToggle = document.querySelector("#filterToggle")
+if(filterToggle !== null) {
+    filterToggle.addEventListener("click", e => {
+        e.preventDefault()
+        var filterBody = filterToggle.nextElementSibling
+        if (filterBody.style.maxHeight) {
+            filterBody.style.maxHeight = null;
+          } else {
+            filterBody.style.maxHeight = filterBody.scrollHeight + "px";
+          }
+    })
+}
+/**************************
+ * Cart Quantity
+ **************************/
+const qtyMinus = document.querySelectorAll(".qty-minus")
+const qtyPlus = document.querySelectorAll(".qty-plus")
 
-const changeThemeToDark = () => {
-    lightBtn.style.display = "block"
-    darkBtn.style.display = "none"
-    document.documentElement.setAttribute("data-theme", "dark")
-    localStorage.setItem("theme", "dark")
-}
-const changeThemeToLight = () => {
-    lightBtn.style.display = "none"
-    darkBtn.style.display = "block"
-    document.documentElement.setAttribute("data-theme", "light")
-    localStorage.setItem("theme", "light")
-}
-if(localStorage.getItem("theme") == "dark") {
-    changeThemeToDark()
-}else{
-    changeThemeToLight()
+    for (let i = 0; i < qtyMinus.length; i++) {
+        const element = qtyMinus[i];
+        element.addEventListener("click", e => {
+            elClicked = e.target
+            input = elClicked.parentElement.children[1]
+            if(input.value > 1) {
+                input.value = parseInt(input.value) - 1
+            }else {
+                input.value = 1
+            }
+        })
+    }
+    for (let i = 0; i < qtyPlus.length; i++) {
+        const element = qtyPlus[i];
+        element.addEventListener("click", e => {
+            elClicked = e.target
+            input = elClicked.parentElement.children[1]
+            input.value = parseInt(input.value) + 1
+        })
+    }   
+
+/**************************
+ * Scroll to top
+ **************************/
+const scrollTopBtn = document.querySelector(".scrolltop")
+if(scrollTopBtn !== null) {
+    scrollTopBtn.addEventListener("click", () => {
+        document.querySelector("html").scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        });
+    })
 }

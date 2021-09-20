@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>MassStock | Cart</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__box">
+            <a href="#" class="header__menu" id="menutoggle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                    <rect width="24" height="2" x="4" y="24" />
+                    <rect width="24" height="2" x="4" y="12" />
+                    <rect width="24" height="2" x="4" y="18" />
+                    <rect width="24" height="2" x="4" y="6" />
+                </svg>
+            </a>
+            <a href="#" class="header__logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                    <title>MassStock</title>
+                    <path
+                        d="M28,2H16a2.002,2.002,0,0,0-2,2V14H4a2.002,2.002,0,0,0-2,2V30H30V4A2.0023,2.0023,0,0,0,28,2ZM9,28V21h4v7Zm19,0H15V20a1,1,0,0,0-1-1H8a1,1,0,0,0-1,1v8H4V16H16V4H28Z" />
+                    <rect width="2" height="2" x="18" y="8" />
+                    <rect width="2" height="2" x="24" y="8" />
+                    <rect width="2" height="2" x="18" y="14" />
+                    <rect width="2" height="2" x="24" y="14" />
+                    <rect width="2" height="2" x="18" y="20" />
+                    <rect width="2" height="2" x="24" y="20" />
+                    <rect width="32" height="32" fill="none" data-name="&lt;Transparent Rectangle>" />
+                </svg>
+                <span>MassStock</span>
+            </a>
+            <nav class="header__nav">
+                <a href="#" class="header__nav--item">baby</a>
+                <a href="#" class="header__nav--item">kids</a>
+                <a href="#" class="header__nav--item">women</a>
+                <a href="#" class="header__nav--item">men</a>
+            </nav>
+            <a href="/frontend/cart.html" class="header__cart">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                    <title>Cart</title>
+                    <circle cx="10" cy="28" r="2" />
+                    <circle cx="24" cy="28" r="2" />
+                    <path
+                        d="M28,7H5.82L5,2.8A1,1,0,0,0,4,2H0V4H3.18L7,23.2A1,1,0,0,0,8,24H26V22H8.82L8,18H26a1,1,0,0,0,1-.78l2-9A1,1,0,0,0,28,7Zm-2.8,9H7.62L6.22,9H26.75Z" />
+                    <rect width="32" height="32" fill="none" data-name="&lt;Transparent Rectangle>" />
+                </svg>
+            </a>
+        </div>
+        <nav class="mobile__nav">
+            <a href="#" class="mobile__nav--item">baby</a>
+            <a href="#" class="mobile__nav--item">kids</a>
+            <a href="#" class="mobile__nav--item">women</a>
+            <a href="#" class="mobile__nav--item">men</a>
+        </nav>
+    </header>
+    <main class="content">
+        <div class="jumbotron">
+            <h2>(2) item in cart</h2>
+        </div>
+        <div class="container">
+            <div class="cart">
+                <form action="">
+                    <div class="cart__table">
+                        <table class="cart__table">
+                            <thead>
+                                <tr>
+                                    <th>article</th>
+                                    <th></th>
+                                    <th>reference</th>
+                                    <th>quantity</th>
+                                    <th>action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img src="./img/baby-1.webp" alt="">
+                                    </td>
+                                    <td>robe</td>
+                                    <td>c256</td>
+                                    <td>
+                                        <button type="button" class="btn  btn--default qty-minus">-</button>
+                                        <input type="text" name="" id="" value="1" class="quantity">
+                                        <button type="button" class="btn  btn--default qty-plus">+</button>
+                                    </td>
+                                    <td>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                            <title>remove</title>
+                                            <rect width="2" height="12" x="12" y="12" />
+                                            <rect width="2" height="12" x="18" y="12" />
+                                            <rect width="8" height="2" x="12" y="2" />
+                                            <rect width="32" height="32" fill="none"
+                                                data-name="&lt;Transparent Rectangle>" />
+                                            <path d="M4,6V8H6V28a2,2,0,0,0,2,2H24a2,2,0,0,0,2-2V8h2V6ZM8,28V8H24V28Z" />
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="./img/baby-2.webp" alt="">
+                                    </td>
+                                    <td>ensemble</td>
+                                    <td>d500</td>
+                                    <td>
+                                        <button type="button" class="btn  btn--default qty-minus">-</button>
+                                        <input type="text" name="" id="" value="1" class="quantity">
+                                        <button type="button" class="btn  btn--default qty-plus">+</button>
+                                    </td>
+                                    <td>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                            <title>remove</title>
+                                            <rect width="2" height="12" x="12" y="12" />
+                                            <rect width="2" height="12" x="18" y="12" />
+                                            <rect width="8" height="2" x="12" y="2" />
+                                            <rect width="32" height="32" fill="none"
+                                                data-name="&lt;Transparent Rectangle>" />
+                                            <path d="M4,6V8H6V28a2,2,0,0,0,2,2H24a2,2,0,0,0,2-2V8h2V6ZM8,28V8H24V28Z" />
+                                        </svg>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <input type="submit" value="confirm" class="btn btn--success">
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <span>copyright reserved for MassStock</span>
+            <span>created with love</span>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+</html>
