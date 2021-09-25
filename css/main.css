@@ -202,9 +202,9 @@ hr {
 }
 
 .btn.btn--success {
-  background-color: #2a83d6;
+  background-color: #2cbd72;
   color: #f7f8f9;
-  border-color: #2a83d6;
+  border-color: #2cbd72;
 }
 
 .btn.btn--default {
@@ -343,14 +343,14 @@ hr {
   bottom: -10px;
   width: 0;
   height: .2rem;
-  background-color: #2a83d6;
+  background-color: #2cbd72;
   z-index: 2;
   -webkit-transition: width .4s;
   transition: width .4s;
 }
 
 .header__nav--item:hover, .header__nav--item.active {
-  color: #2a83d6;
+  color: #2cbd72;
 }
 
 .header__nav--item:hover::before, .header__nav--item.active::before {
@@ -469,7 +469,7 @@ hr {
   text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: 500;
-  background-color: #2a83d6;
+  background-color: #2cbd72;
   color: #f7f8f9;
   padding: .5rem .8rem;
   border-radius: 3px;
@@ -541,10 +541,10 @@ hr {
 }
 
 .card button:active {
-  background-color: #2576c1;
-  border-color: #2576c1;
-  -webkit-box-shadow: 0 0 5px rgba(42, 131, 214, 0.5);
-          box-shadow: 0 0 5px rgba(42, 131, 214, 0.5);
+  background-color: #27a866;
+  border-color: #27a866;
+  -webkit-box-shadow: 0 0 5px rgba(44, 189, 114, 0.5);
+          box-shadow: 0 0 5px rgba(44, 189, 114, 0.5);
 }
 
 .filter {
